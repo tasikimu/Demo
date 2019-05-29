@@ -1,0 +1,48 @@
+<!-- <h1 class="positioned">Users</h1> -->
+<div style="text-align:center">
+    <h2>
+      Welcome Super Admin!
+    </h2><br>
+      <button (click)="logout()">
+        Logout
+        </button>
+    <!-- </p> -->
+  </div>
+<body style="background-color:rgb(211, 211, 211)">
+<div class="test-container">
+
+    <!-- <div class="test-header">
+      <label><input class="context-menu-one btn btn-neutral" type="checkbox" checked="true" id="firstname" />Firstname</label>
+      <label><input class="context-menu-one btn btn-neutral" type="checkbox" checked="true" id="lastname" />Lastname</label>
+      <label><input type="checkbox" checked="true" id="gender" />Gender</label>
+      <label><input type="checkbox" checked="true" id="email"/>Email</label>
+      <label><input type="checkbox" checked="true" id="city"/>City</label>
+      <label><input type="checkbox" checked="true" id="username"/>Username</label>
+      <br>
+
+      <button class="context-menu-one btn btn-neutral" (click)="onBtApply(false)">Apply</button> 
+     <br> 
+     <button (click)="onBtApply(false)">Apply Reverse</button>
+    </div> -->
+
+    <ag-grid-angular
+      #agGrid
+      id="myGrid"
+      class="ag-theme-balham test-grid"
+      [columnDefs]="columnDefs"
+      [defaultColDef]="defaultColDef"
+      [animateRows]="true"
+      [sideBar]="sideBar"
+      [statusBar]="statusBar"
+      [enableRangeSelection]="true"
+      [rowData]="rowData"
+      (gridReady)="onGridReady($event)"
+      [gridOptions]="gridOptions"
+      color="pink"
+    ></ag-grid-angular>
+  </div>
+  <footer>
+      <small style="position: fixed">&copy; Copyright 2019 Tasikimu</small>
+</footer>
+  <router-outlet></router-outlet>
+</body>
